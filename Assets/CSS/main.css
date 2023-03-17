@@ -1,0 +1,304 @@
+* {
+  z-index: 1;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #151019;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  max-width: 1400px;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.no-select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+header {
+  display: none;
+  height: 100vh;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  right: 10px;
+  z-index: 10;
+}
+header ul {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header ul li {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+header ul li.nav-margin {
+  margin: 10px;
+  opacity: 44%;
+}
+header ul li .nav-link {
+  opacity: 22%;
+  width: 100%;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+header ul li .nav-link.active {
+  opacity: 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+main .content {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .content#about {
+  display: flex;
+  flex-direction: column;
+}
+main .content#about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .content#about .container .image {
+  height: 400px;
+  width: 250px;
+  background: url("../Images/Cute Girl 6.png") no-repeat center;
+  background-size: cover;
+  border-radius: 15px;
+  margin: 30px 0px;
+}
+main .content#about .container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: clamp(300px, 100vw, 550px);
+  padding-top: 20px;
+}
+main .content#about .container .info .basic {
+  padding-left: 10px;
+  text-align: start;
+}
+main .content#about .container .info .name {
+  font-size: 1.5rem;
+}
+main .content#about .container .info .status {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+main .content#about .container .info .bio {
+  padding: 10px;
+  text-align: start;
+}
+main .content#about .container .stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  color: #ffffff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+main .content#about .container .stats .stat {
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main .content#about .container .stats .stat .value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .content#about .container .stats .stat .label {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+main .content#hobbies {
+  display: flex;
+  flex-direction: column;
+}
+main .content#hobbies .title {
+  margin: 20px 0px;
+  font-size: 3rem;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+main .content#hobbies .container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+main .content#hobbies .container .hobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+main .content#hobbies .container .hobby .image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  width: clamp(300px, 50%, 100%);
+  border-radius: 10px;
+}
+main .content#hobbies .container .hobby .info {
+  width: 90%;
+  padding: 10px;
+  color: #ffffff;
+}
+main .content#hobbies .container .hobby .info .basic .name {
+  font-size: 2rem;
+  font-weight: 600;
+}
+main .content#hobbies .container .hobby .info .desc {
+  padding: 10px;
+}
+
+@media (min-width: 600px) {
+  main .content#about {
+    padding: 20px;
+  }
+  main .content#about .container {
+    margin-top: 0px;
+  }
+  main .content#about .container .image {
+    height: 500px;
+    width: 300px;
+  }
+  main .content#about .container .info .basic {
+    text-align: start;
+  }
+  main .content#about .container .info .name {
+    font-size: 2.5rem;
+  }
+  main .content#about .container .info .status {
+    font-weight: 300;
+    font-size: 1.25rem;
+  }
+  main .content#about .container .info .bio {
+    padding: 20px;
+    padding-left: 0;
+    text-align: start;
+  }
+  main .content#about .container .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  main .content#about .container .stats .stat .value {
+    font-size: 2rem;
+  }
+  main .content#hobbies .container .hobby {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 992px) {
+  main .content#hobbies .container .hobby {
+    width: 700px;
+  }
+  main .content#hobbies .container .hobby[data-pos=odd] {
+    flex-direction: row-reverse;
+    right: -100px;
+  }
+  main .content#hobbies .container .hobby[data-pos=odd] .info {
+    text-align: end;
+  }
+  main .content#hobbies .container .hobby[data-pos=even] {
+    flex-direction: row;
+    left: -100px;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    display: block;
+    width: 150px;
+    right: 20px;
+  }
+  header ul li {
+    font-size: 2rem;
+  }
+  main {
+    margin-right: 150px;
+  }
+  main .content#about .container {
+    flex-direction: row;
+  }
+  main .content#about .container .info {
+    padding-top: 0px;
+  }
+  main .content#about .container .info .basic {
+    text-align: end;
+  }
+  main .content#about .container .info .bio {
+    padding: 20px;
+    padding-right: 0;
+    text-align: end;
+  }
+  main .content#hobbies .container .hobby[data-pos=odd] {
+    right: -200px;
+  }
+  main .content#hobbies .container .hobby[data-pos=even] {
+    left: 0px;
+  }
+}/*# sourceMappingURL=main.css.map */

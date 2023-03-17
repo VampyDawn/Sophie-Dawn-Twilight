@@ -1,0 +1,154 @@
+header {
+	display: none;
+	height: 100vh;
+	width: 100px;
+	position: fixed;
+	top: 0;
+	right: 10px;
+	z-index: 10;
+	ul {
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		li {
+			font-size: 1.25rem;
+			color: $white;
+			margin: 0px 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			&.nav-margin {
+				margin: 10px;
+				opacity: $emp-mid;
+			}
+			.nav-link {
+				opacity: $emp-low;
+				width: 100%;
+				text-align: center;
+				transition: all 0.25s ease-in-out;
+				&.active {
+					opacity: 100%;
+					transition: all 0.25s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+main {
+	.content {
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&#about {
+			display: flex;
+			flex-direction: column;
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.image {
+					height: 400px;
+					width: 250px;
+					background: url("../Images/Cute Girl 6.png") no-repeat
+						center;
+					background-size: cover;
+					border-radius: 15px;
+					margin: 30px 0px;
+				}
+				.info {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					width: clamp(300px, 100vw, 550px);
+					padding-top: 20px;
+					.basic {
+						padding-left: 10px;
+						text-align: start;
+					}
+					.name {
+						font-size: 1.5rem;
+					}
+					.status {
+						font-weight: 100;
+						font-size: 0.9rem;
+					}
+					.bio {
+						padding: 10px;
+						text-align: start;
+					}
+				}
+				.stats {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-gap: 10px;
+					color: $white;
+					width: 100%;
+					margin-bottom: 10px;
+					.stat {
+						margin: 0px 10px;
+						display: flex;
+						flex-direction: column;
+						text-align: center;
+						.value {
+							font-size: 1.5rem;
+							font-weight: 600;
+						}
+						.label {
+							font-size: 0.9rem;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+		&#hobbies {
+			display: flex;
+			flex-direction: column;
+			.title {
+				margin: 20px 0px;
+				font-size: 3rem;
+				text-decoration: underline white;
+			}
+			.container {
+				position: relative;
+				min-height: 100vh;
+				width: 100%;
+				.hobby {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+					flex-direction: column;
+					.image {
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						height: 400px;
+						width: clamp(300px, 50%, 100%);
+						border-radius: 10px;
+					}
+					.info {
+						width: 90%;
+						padding: 10px;
+						color: $white;
+						.basic {
+							.name {
+								font-size: 2rem;
+								font-weight: 600;
+							}
+						}
+						.desc {
+							padding: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

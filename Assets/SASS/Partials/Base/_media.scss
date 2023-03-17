@@ -1,0 +1,120 @@
+@media (min-width: $br-tablet) {
+	main {
+		.content {
+			&#about {
+				padding: 20px;
+				.container {
+					margin-top: 0px;
+					.image {
+						height: 500px;
+						width: 300px;
+					}
+					.info {
+						.basic {
+							text-align: start;
+						}
+						.name {
+							font-size: 2.5rem;
+						}
+						.status {
+							font-weight: 300;
+							font-size: 1.25rem;
+						}
+						.bio {
+							padding: 20px;
+							padding-left: 0;
+							text-align: start;
+						}
+					}
+					.stats {
+						grid-template-columns: repeat(4, 1fr);
+						.stat {
+							.value {
+								font-size: 2rem;
+							}
+						}
+					}
+				}
+			}
+			&#hobbies {
+				.container {
+					.hobby {
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $br-laptop) {
+	main {
+		.content {
+			&#hobbies {
+				.container {
+					.hobby {
+						width: 700px;
+						&[data-pos="odd"] {
+							flex-direction: row-reverse;
+							right: -100px;
+							.info {
+								text-align: end;
+							}
+						}
+						&[data-pos="even"] {
+							flex-direction: row;
+							left: -100px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $br-desktop) {
+	header {
+		display: block;
+		width: 150px;
+		right: 20px;
+		ul {
+			li {
+				font-size: 2rem;
+			}
+		}
+	}
+	main {
+		margin-right: 150px;
+		.content {
+			&#about {
+				.container {
+					flex-direction: row;
+					.info {
+						padding-top: 0px;
+						.basic {
+							text-align: end;
+						}
+						.bio {
+							padding: 20px;
+							padding-right: 0;
+							text-align: end;
+						}
+					}
+				}
+			}
+
+			&#hobbies {
+				.container {
+					.hobby {
+						&[data-pos="odd"] {
+							right: -200px;
+						}
+						&[data-pos="even"] {
+							left: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
